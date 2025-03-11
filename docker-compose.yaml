@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react-docker:
+    container_name: react-docker
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "8081:8081"
+    command: ["npm", "run", "dev"]
